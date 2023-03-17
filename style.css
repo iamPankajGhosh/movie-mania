@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Noto+Sans+Khmer:wght@100;200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans Khmer", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #222;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: #fff;
+}
+
+.logo-container {
+  flex: 2;
+  color: #facc15;
+  font-size: 1.3rem;
+  font-family: "Kaushan Script", cursive;
+  cursor: default;
+}
+
+.menu-container {
+  flex: 6;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.menu-list-item {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.menu-list-item.active {
+  font-weight: bold;
+}
+
+.profile-container {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-picture {
+  height: 32px;
+  width: 32px;
+  background-color: #facc15;
+  border-radius: 50%;
+}
+
+.profile-text-container {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: #94a3b8;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.toggle-icon {
+  color: #facc15;
+}
+
+.toggle-icon.sun {
+  position: relative;
+  right: -2px;
+}
+
+.toggle-ball {
+  height: 18px;
+  width: 18px;
+  background-color: #0f172a;
+  border-radius: 50%;
+  position: absolute;
+  right: 2px;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 50px;
+  min-height: 100vh;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.side-menu-icon {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
