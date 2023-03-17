@@ -129,7 +129,7 @@ body {
 }
 
 .featured-movie {
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -137,6 +137,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.featured-movie-title{
+  width: 400px;
 }
 
 .featured-desc {
@@ -169,10 +173,11 @@ body {
 .movie-list{
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .movie-list-title{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 500;
 }
 
