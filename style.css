@@ -117,3 +117,45 @@ body {
   cursor: pointer;
 }
 
+
+    
+
+.container {
+  background-color: #333;
+  height: calc(100vh - 50px);
+  color: #fff;
+}
+
+.content-container {
+  margin-left: 50px;
+}
+
+.featured-movie {
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.featured-desc {
+  width: 500px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.featured-btn{
+    width: 200px;
+    background-color: #facc15;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
