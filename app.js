@@ -18,8 +18,6 @@ rightArrows.forEach((right, i) => {
       clickCounter = 0;
     }
   });
-
-  console.log(Math.floor(window.innerWidth / 270));
 });
 
 
