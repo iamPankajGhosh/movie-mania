@@ -4,6 +4,15 @@
   margin: 0;
 }
 
+html::-webkit-scrollbar{
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: #facc15;
+  border-radius: 5px;
+}
+
 body {
   font-family: "Noto Sans Khmer", sans-serif;
   overflow-x: hidden;
@@ -21,12 +30,13 @@ body {
   padding: 0 50px;
   height: 100%;
   color: #fff;
+  transition: all 0.3s;
 }
 
 .logo-container {
   flex: 2;
   color: #facc15;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Kaushan Script", cursive;
   cursor: default;
 }
@@ -69,7 +79,7 @@ body {
 }
 
 .toggle {
-  width: 40px;
+  width: 44px;
   height: 20px;
   background-color: #94a3b8;
   border-radius: 30px;
@@ -85,17 +95,18 @@ body {
 
 .toggle-icon.sun {
   position: relative;
-  right: -2px;
+  right: -1px;
 }
 
 .toggle-ball {
   height: 18px;
   width: 18px;
-  background-color: #0f172a;
+  background-color: #222;
   border-radius: 50%;
   position: absolute;
-  right: 2px;
+  right: 3px;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .sidebar {
@@ -123,6 +134,7 @@ body {
   background-color: #333;
   min-height: calc(100vh - 50px);
   color: #fff;
+  transition: all 0.3s;
 }
 
 .content-container {
@@ -133,14 +145,15 @@ body {
   height: 70vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom center;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transition: all 0.5s;
 }
 
-.featured-movie-title{
+.featured-movie-title {
   width: 400px;
 }
 
@@ -150,28 +163,28 @@ body {
   font-weight: 300;
 }
 
-.featured-btn{
-    width: 200px;
-    background-color: #facc15;
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 0;
+.featured-btn {
+  width: 200px;
+  background-color: #facc15;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
 }
 
-.movie-list-container{
+.movie-list-container {
   padding: 10px 40px;
 }
 
-.movie-list-wrapper{
+.movie-list-wrapper {
   position: relative;
 }
 
-.movie-list{
+.movie-list {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -179,17 +192,17 @@ body {
   transition: all 0.5s;
 }
 
-.movie-list-title{
+.movie-list-title {
   margin-bottom: 10px;
   font-weight: 500;
 }
 
-.movie-list-item{
+.movie-list-item {
   margin-right: 30px;
   position: relative;
 }
 
-.movie{
+.movie {
   width: 270px;
   height: 150px;
   object-fit: cover;
@@ -197,11 +210,11 @@ body {
   transition: all 0.3s;
 }
 
-.movie-list-item:hover .movie{
+.movie-list-item:hover .movie {
   transform: scale(1.2);
 }
 
-.movie-info{
+.movie-info {
   background-color: #000000a2;
   position: absolute;
   top: 0;
@@ -216,22 +229,22 @@ body {
   transition: all 0.3s;
 }
 
-.movie-list-item:hover .movie-info{
+.movie-list-item:hover .movie-info {
   transform: scale(1.2);
   opacity: 100%;
 }
 
-.movie-title{
+.movie-title {
   font-size: 1rem;
   font-weight: 500;
 }
 
-.movie-desc{
+.movie-desc {
   font-size: 0.7rem;
   margin-bottom: 10px;
 }
 
-.play-btn{
+.play-btn {
   border: none;
   outline: none;
   border-radius: 3px;
@@ -239,7 +252,7 @@ body {
   cursor: pointer;
 }
 
-.slide-arrow{
+.slide-arrow {
   position: absolute;
   top: 50px;
   font-size: 50px;
@@ -250,14 +263,63 @@ body {
   transition: all 0.3s;
 }
 
-.slide-arrow:hover{
+.slide-arrow:hover {
   opacity: 100%;
 }
 
-.left{
+.left {
   left: -30px;
 }
 
-.right{
+.right {
   right: -30px;
+}
+
+.container.active {
+  background-color: #e2e8f0;
+}
+
+.movie-list-title.active {
+  color: #222;
+}
+
+.slide-arrow.active {
+  color: #222;
+}
+
+.navbar-container.active{
+  background-color: #94a3b8;
+  color: #222;
+}
+
+.sidebar.active{
+  background-color: #94a3b8;
+}
+
+.side-menu-icon.active{
+  color: #222;
+}
+
+.toggle.active{
+  background-color: #222;
+}
+
+.toggle-ball.active{
+  transform: translateX(-20px);
+  background-color: #64748b;
+}
+
+@media only screen and (max-width : 940px) {
+  .menu-container{
+    display: none;
+  }
+  .featured-movie{
+    background-position: top left;
+    padding: 10px 20px;
+    height: 70vh;
+  }
+  .featured-desc{
+    width: 100%;
+    font-size: 0.9rem;
+  }
 }
