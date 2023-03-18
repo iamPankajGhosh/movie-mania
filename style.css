@@ -4,11 +4,15 @@
   margin: 0;
 }
 
-html::-webkit-scrollbar{
+html {
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
   width: 10px;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   background-color: #facc15;
   border-radius: 5px;
 }
@@ -16,6 +20,7 @@ html::-webkit-scrollbar-thumb{
 body {
   font-family: "Noto Sans Khmer", sans-serif;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 .navbar {
@@ -39,6 +44,7 @@ body {
   font-size: 1.1rem;
   font-family: "Kaushan Script", cursive;
   cursor: default;
+  transition: all 0.3s;
 }
 
 .menu-container {
@@ -287,39 +293,63 @@ body {
   color: #222;
 }
 
-.navbar-container.active{
+.navbar-container.active {
   background-color: #94a3b8;
   color: #222;
 }
 
-.sidebar.active{
+.sidebar.active {
   background-color: #94a3b8;
 }
 
-.side-menu-icon.active{
+.side-menu-icon.active {
   color: #222;
 }
 
-.toggle.active{
+.toggle.active {
   background-color: #222;
 }
 
-.toggle-ball.active{
+.toggle-ball.active {
   transform: translateX(-20px);
   background-color: #64748b;
 }
 
-@media only screen and (max-width : 940px) {
-  .menu-container{
+@media only screen and (max-width: 940px) {
+  .menu-container {
     display: none;
   }
-  .featured-movie{
+  .featured-movie {
     background-position: top left;
     padding: 10px 20px;
     height: 70vh;
   }
-  .featured-desc{
-    width: 100%;
-    font-size: 0.9rem;
+
+  .featured-desc {
+    display: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    .navbar-container {
+      padding-right: 10px;
+    }
+
+    .logo-container {
+      font-size: 0.7rem;
+    }
+
+    .profile-text-container {
+      font-size: 0.8rem;
+      margin: 0 5px;
+      margin-right: 10px;
+    }
+
+    .featured-movie {
+      height: 50vh;
+    }
+
+    .featured-movie-title {
+      width: 300px;
+    }
   }
 }
